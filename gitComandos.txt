@@ -1,0 +1,34 @@
+mkdir prueba
+
+cd prueba
+
+git clone https://web_del_proyecto.git .  
+-> Te lo bajas en tu pc al directorio que acabas de crear y que estás dentro
+
+mkdir "mi_nuevo_directorio_con_o_sin_contenido"  -> debe de estar dentro del directorio 
+anterior para que el próximo comando no dé error
+
+git add "mi_nuevo_directorio_con_o_sin_contenido"
+
+git commit -m "Nuevo directorio"
+
+git push origin
+Comandos útiles:
+
+git log --oneline tenemos el último cambio
+git status
+
+git status: sirve para ver el estado de todos nuestros archivos y carpetas
+git add: Sirve para mover archivos del Untracked o Unstaged al estado Staged.
+Podemos usar:
+git nombre-del-archivo-o-carpeta para añadir archivos y carpetas individuales.
+git add-a para mover todos los todos archivos de nuestro proyecto.
+git reset HEAD: sirve para sacar archivos del estado staged para devolverlos a su estado anterior. Si los archivos venían de Unstaged, vuelven a ese estado. Lo mismo pasa si vienen de Untracked.
+git commit: Sirve para mover archivos del estado Unstaged al estado Staged.
+Esta es una oración especial, los archivos han sido guardados o actualizados en el repositorio.
+Git nos pedira que dejemos un mensaje para recordar los cambios que hicimos y podemos usar argumentos ** -m ** para escribirlo.
+Ejemplo: ** git commit -m “mensaje…” **
+**git rm: Este comando necesita un argumento para poder ejecutarse correctamente:
+git rm --cached: Sirve para mover los archivos que le indiquemos al estado Untracked.
+git rm --force: Sirve para eliminar los archivos de Git y del disco duro.
+Git guarda el registro de la existencia de los archivos permitiéndonos poder recuperarlos si es necesario.
