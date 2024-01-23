@@ -5,6 +5,12 @@ cd prueba
 git clone https://web_del_proyecto.git .  
 -> Te lo bajas en tu pc al directorio que acabas de crear y que estás dentro
 
+git remote -v
+Para ver los accesos remotos
+
+git remote add origin1 git@github.com:gustalamantes/python.git
+Agregar un nuevo acceso
+
 mkdir "mi_nuevo_directorio_con_o_sin_contenido"  -> debe de estar dentro del directorio 
 anterior para que el próximo comando no dé error
 
@@ -17,6 +23,25 @@ Comandos útiles:
 
 git log --oneline tenemos el último cambio
 git status
+
+git branch
+Ver las ramas
+
+git checkout -b version1
+Agregar una rama
+
+git add grid.html
+Agregar archivo
+
+git commit -m "nuevo grid"
+Commit
+
+git merge version1
+Ubicar la rama
+
+git push origin version1
+Pasar archivo en repositorio y rama
+
 
 git status: sirve para ver el estado de todos nuestros archivos y carpetas
 git add: Sirve para mover archivos del Untracked o Unstaged al estado Staged.
