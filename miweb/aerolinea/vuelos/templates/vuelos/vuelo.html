@@ -1,0 +1,37 @@
+{% extends "vuelos/layout.html" %}
+
+{% block body %}
+
+<h1>Vuelo {{ vuelo.id }}</h1>
+
+<ul>
+    <li>Origin: {{ vuelo.origin }}</li>
+    <li>Destination: {{ vuelo.destination }}</li>
+    <li>Duration: {{ vuelo.duration }}</li>
+</ul>
+
+<h2>Pasajeros</h2>
+
+<ul>
+    {% for pasajero in pasajeros %}
+        <li>{{ pasajero }}</li>
+    {% empty %}
+        <li>Sin pasajeros en el vuelo</li>
+    {% endfor %}
+</ul>
+
+<h2>Agregar pasajero</h2>
+
+<form action="{% url 'book' vuelo.id %}" method="post">
+    {% csrf_token %}
+    <select name="pasajero">
+        {% for pasajero in non_pasajero %}
+            <option value="{{ pasajero.id }}">{{ pasajero }}</option>
+        {% endfor %}
+    </select>
+    <input type="submit">
+</form>
+
+<a href="{% url 'index' %}">Regresar a lista completa</a>
+
+{% endblock %}
