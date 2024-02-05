@@ -18,6 +18,12 @@ Comandos útiles:
 git log --oneline tenemos el último cambio
 git status
 
+Ver el repositorio activo
+git remote -v
+
+Ver la rama activa
+git branch
+
 git status: sirve para ver el estado de todos nuestros archivos y carpetas
 git add: Sirve para mover archivos del Untracked o Unstaged al estado Staged.
 Podemos usar:
