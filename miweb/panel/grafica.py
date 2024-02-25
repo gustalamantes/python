@@ -343,6 +343,8 @@ def gra_HistogramaM(c):
     for item in ([ax_main.xaxis.label, ax_main.yaxis.label] + ax_main.get_xticklabels() + ax_main.get_yticklabels()):
         item.set_fontsize(14)
     xlabels = ax_main.get_xticks().tolist()
+    #Limpiar
+    ax_main.set_xticks(ax_main.get_xticks())
     ax_main.set_xticklabels(xlabels)
     plt.savefig("./panel/static/panel/graf_HistogramaM.png")
     cad = c + '<p>Histograma Marginal</p>\n' + '<p><img src="/static/panel/graf_HistogramaM.png" /></p>\n' 
