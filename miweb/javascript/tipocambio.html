@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <title>Currency</title>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+
+            document.querySelector('form').onsubmit = function() {
+
+                let text = '[' +
+                                ' { "moneda":"EUR" , "tcambio":"0.99078" },' +
+                                ' { "moneda":"MNX" , "tcambio":"23.1890" },' +
+                                ' { "moneda":"JPY" , "tcambio":"29.8709" } ]';
+                
+               
+                const data = JSON.parse(text);
+                /*
+                let text2 = '[' + '{"EUR":"0.99078"},{"MXN":"18.56098"},{"JPY":"28.90876"}]';
+                const obj2 = JSON.parse(text2);
+                console.log(obj2);
+                console.log("Hola");
+                */
+
+                const bmoneda = document.querySelector('#currency').value.toUpperCase();
+                
+                var rate = '';
+                data.forEach((e,i) => {
+                        const mcurrency = data[i].moneda;
+                        if(mcurrency === bmoneda){
+                            rate = data[i].tcambio;
+                        }
+                    }
+                );
+                
+                if (rate !== '') {
+                    const tc = Number(rate).toFixed(3);
+                    console.log(tc);
+                    const result = '1 USD is equal to ' + tc + ' ' + bmoneda;
+                    console.log(result);
+                    document.querySelector('#result').innerHTML = result;
+                    document.getElementById("currency").value = "";
+                }else {
+                    document.querySelector('#result').innerHTML = 'Invalid currency.';
+                }
+                
+                return false;
+            }
+            
+            
+            
+        });
+    </script>
+    <body>
+        <form>
+            <input id="currency" placeholder="Currency">
+            <input type="submit" value="Convert">
+        </form>
+        <div id="result">
+        </div>
+    </body>
+</html>

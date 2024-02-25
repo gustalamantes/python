@@ -34,6 +34,9 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     'hello',
     'newyear',
+    'panel',
+    'rest_framework',
+    'datos',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

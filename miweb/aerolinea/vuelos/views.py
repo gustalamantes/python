@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponseBadRequest, HttpResponseRedirect, Http404
 from django.urls import reverse
 from .models import Vuelo, Aeropuerto, Pasajero
+#from mysql.connector import connect, Error
 
 # Create your views here.
 def index(request):
