@@ -32,9 +32,9 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'hello',
-    'newyear',
-    'panel',
+    #'hello',
+    #'newyear',
+    #'panel',
     'rest_framework',
     'datos',
     'django.contrib.admin',
@@ -86,6 +86,7 @@ DATABASES = {
     }
 }
 
+#AUTH_USER_MODEL = 'YourAppName.YourClassName'
 
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
@@ -105,6 +106,13 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+REST_FRAMEWORK = {
+    # Use Django's standard `django.contrib.auth` permissions,
+    # or allow read-only access for unauthenticated users.
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
+    ]
+}
 
 # Internationalization
 # https://docs.djangoproject.com/en/5.0/topics/i18n/

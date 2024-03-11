@@ -31,19 +31,60 @@ cad = ''
 #cad = gra_Lineas8(cad)
 #cad = gra_Multiples(cad)
 #cad = gra_PandasLineas(cad)
+
 #graficas TOP y seaborn
+
 #cad = gra_Scatter(cad)
 #cad = gra_PlotEncircling(cad)
 #cad = gra_PlotRegression(cad)
 #cad = gra_PlotRegressionCol(cad)
-    #Revisar colores y medida de jitter
-#cad = gra_Jittering(cad) 
-#cad = gra_CountPlot(cad)
-    #Termina revisar
-cad = gra_HistogramaM(cad)
-cad = gra_BoxplotM(cad)
-cad = gra_Correlograma(cad)
-cad = gra_Pairwise(cad)
+#cad = gra_Jittering(cad) #No hace lo que debe
+#cad = gra_CountPlot(cad) #No hace lo que debe
+#cad = gra_HistogramaM(cad)
+#cad = gra_BoxplotM(cad)
+#cad = gra_Correlograma(cad)
+#cad = gra_Pairwise(cad)
+#cad = gra_DiverginB(cad)
+#cad = gra_DiverginT(cad)
+#cad = gra_DiverginP(cad)
+#cad = gra_DiverginL(cad)
+#cad = gra_Areachart(cad)
+#cad = gra_OrderedB(cad)
+#cad = gra_Lollipop(cad)
+#cad = gra_DotPlot(cad)
+#cad = gra_Slopechar(cad)
+#cad = gra_DumbbellPlot(cad)
+#cad = gra_HistogramaCont(cad)
+#cad = gra_HistogramaCateg(cad)
+#cad = gra_DensityP(cad)
+#cad = gra_DensityCH(cad) #No funciona
+#cad = gra_Joyplot(cad)
+#cad = gra_DotplotD(cad)
+#cad = gra_Boxplot(cad)
+#cad = gra_DotyBoxplot(cad)
+#cad = gra_Violinplot(cad)
+#cad = gra_Piramid(cad) #No esta completo
+#cad = gra_PlotCategorical(cad) #No funciona
+#cad = gra_Pie(cad)
+#cad = gra_PieE(cad)
+#cad = gra_Treemap(cad)
+#cad = gra_Barchart(cad)
+#cad = gra_Timeplot(cad)
+#cad = gra_TimeSeries(cad)
+#cad = gra_Autocorrelation(cad)
+#cad = gra_CrossCorrelation(cad)
+#cad = gra_TimeDecomposition(cad)
+#cad = gra_MultipleTimeSeries(cad)
+#cad = gra_DifferentScales(cad)
+#cad = gra_TimeError(cad)
+#cad = gra_StacketArea(cad)
+#cad = gra_UnstacketArea(cad)
+#cad = gra_Calendar(cad) #Falla libreria calmap
+#cad = gra_SeasonalPlot(cad)
+#cad = gra_Dendrogram(cad)
+#cad = gra_Cluster(cad)
+#cad = gra_AndreusCurve(cad)
+cad = gra_ParallelCoordinates(cad)
 
 
 
